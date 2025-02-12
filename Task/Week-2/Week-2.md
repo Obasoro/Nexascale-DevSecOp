@@ -36,11 +36,24 @@ change of mode and executable right
 
 ![alt text](<Screenshot 2025-02-11 162833.png>)
 
+### Restrict Access to `dev-1` and `dev-4`
 
+```sudo nano /etc/ssh/sshd_config```
+
+```Match Users dev-1,dev-4
+      PasswordAuthentication yes
+      PermitRootLogin no
+      AllowTcpForwarding no
 
 ![alt text](<Screenshot 2025-02-11 175623.png>)
 
+For WSL, systemd might not work, so use service to restart
+
+```sudo service sshd restart```
+
 ![alt text](<Screenshot 2025-02-11 175714.png>)
+
+
 
 ![alt text](<Screenshot 2025-02-11 175737.png>)
 
