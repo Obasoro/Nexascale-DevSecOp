@@ -43,7 +43,7 @@ change of mode and executable right
 ```Match Users dev-1,dev-4
       PasswordAuthentication yes
       PermitRootLogin no
-      AllowTcpForwarding no
+      AllowTcpForwarding no```
 
 ![alt text](<Screenshot 2025-02-11 175623.png>)
 
