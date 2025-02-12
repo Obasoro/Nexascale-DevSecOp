@@ -65,3 +65,13 @@ Test access on the either of remain users
 ```sudo ssh dev-3@localhost```
 
 ![alt text](<Screenshot 2025-02-11 175753.png>)
+
+[2] ### System monitoring and Performance Analysis
+
+ Identify the Top Resource-Consuming Process
+ ```top -c```
+ 
+ ![Screenshot 2025-02-12 025120](https://github.com/user-attachments/assets/2f34e71b-f30f-4a50-8dbd-6853083a86f8)
+ 
+
+
