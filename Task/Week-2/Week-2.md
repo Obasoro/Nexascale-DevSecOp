@@ -7,12 +7,15 @@
 
 ![Creating of the Users-dev](<Screenshot 2025-02-11 161619.png>)
 
-Created group Developers and added the Users to the grop
+Created group Developers and added the Users to the group
+
 ```sudo groupadd developers```
 
 Adding the developers to group
+
 ``` sudo usermod -aG <group-name> <user>```
-```
+
+
 ![alt text](<Screenshot 2025-02-11 161838.png>)
 
 ![alt text](<Screenshot 2025-02-11 162743.png>)
