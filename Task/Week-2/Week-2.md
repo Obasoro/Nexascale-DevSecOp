@@ -24,9 +24,19 @@ Created the project directory for the users to interact with
 
 ![alt text](<Screenshot 2025-02-11 162804.png>)
 
+Change the ownership of the directory
+
+```sudo chown -R :developer /var/www/project
+
 ![alt text](<Screenshot 2025-02-11 162818.png>)
 
+change of mode and executable right
+
+```sudo chmod -R 750 /var/www/project```
+
 ![alt text](<Screenshot 2025-02-11 162833.png>)
+
+
 
 ![alt text](<Screenshot 2025-02-11 175623.png>)
 
