@@ -97,5 +97,7 @@ Monitor real-time system logs to detect anomalies.
 
 ```journalctl -f```
 
+![Screenshot 2025-02-12 033229](https://github.com/user-attachments/assets/459a9db2-9a6b-4d19-8799-fcbba0b4b130)
+
 
 
