@@ -40,10 +40,12 @@ change of mode and executable right
 
 ```sudo nano /etc/ssh/sshd_config```
 
-```Match Users dev-1,dev-4
+```
+Match Users dev-1,dev-4
       PasswordAuthentication yes
       PermitRootLogin no
-      AllowTcpForwarding no```
+      AllowTcpForwarding no
+```
 
 ![alt text](<Screenshot 2025-02-11 175623.png>)
 
@@ -53,8 +55,13 @@ For WSL, systemd might not work, so use service to restart
 
 ![alt text](<Screenshot 2025-02-11 175714.png>)
 
-
+Test restriction on dev-1
+```sudo ssh dev-1@localhost```
 
 ![alt text](<Screenshot 2025-02-11 175737.png>)
+
+Test access on the either of remain users
+
+```sudo ssh dev-3@localhost```
 
 ![alt text](<Screenshot 2025-02-11 175753.png>)
