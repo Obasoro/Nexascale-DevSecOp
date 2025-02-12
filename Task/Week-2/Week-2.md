@@ -26,7 +26,7 @@ Created the project directory for the users to interact with
 
 Change the ownership of the directory
 
-```sudo chown -R :developer /var/www/project
+```sudo chown -R :developer /var/www/project```
 
 ![alt text](<Screenshot 2025-02-11 162818.png>)
 
