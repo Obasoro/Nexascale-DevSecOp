@@ -15,6 +15,10 @@ Adding the developers to group
 
 ``` sudo usermod -aG <group-name> <user>```
 
+Created the project directory for the users to interact with
+
+```sudo mkdir -p /var/www/project/```
+
 
 ![alt text](<Screenshot 2025-02-11 161838.png>)
 
