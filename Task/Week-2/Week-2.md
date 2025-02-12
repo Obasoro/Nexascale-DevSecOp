@@ -67,6 +67,8 @@ Test access on the either of remain users
 ![alt text](<Screenshot 2025-02-11 175753.png>)
 
 [2] ### System monitoring and Performance Analysis
+
+
 Your team has been receiving complaints about server slowness during peak hours. You suspect a process might be consuming too many resources. Your tasks are:
 Identify the top resource-consuming process and determine if it is necessary.
 Check the disk usage to ensure logs are not consuming too much space.
@@ -89,7 +91,7 @@ Monitor real-time system logs to detect anomalies.
 
 [ ] Check the disk usage to ensure logs are not consuming too much space.
 
-![Screenshot 2025-02-12 033229](https://github.com/user-attachments/assets/d1b02714-bb47-4174-bd08-de5b4e3f0146
+![Screenshot 2025-02-12 033229](https://github.com/user-attachments/assets/d1b02714-bb47-4174-bd08-de5b4e3f0146)
 
 [ ] Monitor real-time system logs to detect anomalies.
 
