@@ -246,11 +246,22 @@ Deny incoming traffic into the server
 
 2. Checking which ports are currently open on the system.
   
-   To confirm which port are currently opened
+   To confirm which port are currently opened we use the following tool like netstat, ss, or nmap to check open ports.
 
 ```sudo ufw status verbose```
 
 ![image](https://github.com/user-attachments/assets/486b5047-9afd-45be-9b24-aed0cad1bd4b)
+
+```sudo netstat -tuln```
+
+![image](https://github.com/user-attachments/assets/4835fa86-39bc-4726-a651-67689079d2db)
+
+Install nmap, if not available using ```sudo apt install nmap```
+
+```sudo nmap -sT -O localhost```
+
+
+
 
 
 
