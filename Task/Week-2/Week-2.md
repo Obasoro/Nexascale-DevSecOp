@@ -1,6 +1,6 @@
-## Tasks & Challenges
+# Tasks & Challenges
 
-### User and Roles Management
+## User and Roles Management
 [1] Your company recently hired five new developers who need access to the development server. Your task is to
 
 ```sudo useradd -m <name of user>```
@@ -66,7 +66,7 @@ Test access on the either of remain users
 
 ![alt text](<Screenshot 2025-02-11 175753.png>)
 
-### System monitoring and Performance Analysis
+## System monitoring and Performance Analysis
 
 
 [2] Your team has been receiving complaints about server slowness during peak hours. You suspect a process might be consuming too many resources. Your tasks are:
@@ -105,7 +105,7 @@ Identify the Top Resource-Consuming Process
 A check to ensure it is running properly after installation.
 The ability to restart it if it crashes.
 
-### Application Management
+## Application Management
 
 [3] Your development team has requested the installation of Nginx for a new microservice. They also need: Your tasks are to install and setup
 
@@ -136,7 +136,7 @@ Test the connection of the nginx
 
 ![Screenshot 2025-02-12 044428](https://github.com/user-attachments/assets/18612ee7-749c-46bf-9e2c-022e66732dea)
 
-#### Set Up Automatic Restart if Nginx Crashes
+### Set Up Automatic Restart if Nginx Crashes
 
 ```sudo systemctl edit --full nginx```
 
@@ -199,6 +199,62 @@ server {
 5. Reload Nginx to apply the changes
 
 ```sudo systemctl reload nginx```
+
+## Networking and Security
+[4] Security is a top priority at HypotheticalCorp. Your company policy requires
+
+### Your tasks are to configure these security measures on your Linux server?
+
+ 1. Blocking all incoming traffic except SSH and HTTP.
+   
+check whether there are any open port
+
+```sudo ss -tuln```
+
+![image](https://github.com/user-attachments/assets/5ca974c5-5ab5-4424-89f6-0f0d9ed3aaf4)
+
+Both SSH and HTTP port are to opened, while the rest close and this task advised they should be closed.
+
+ufw not install, so install using ```sudo apt-get install ufw``` or sudp apt install ufw```
+
+![image](https://github.com/user-attachments/assets/d8a85ed7-8f9b-46f7-9074-ec29effc7528)
+
+```sudo ufw enable```
+
+![image](https://github.com/user-attachments/assets/869a2e0b-eeac-4ab7-a66c-6da2f951c360)
+
+Deny incoming traffic into the server
+
+```sudo ufw default deny incoming```
+
+![image](https://github.com/user-attachments/assets/e06196f5-d01d-42a6-baf9-104ad8b99250)
+
+```sudo ufw default deny outgoing```
+
+![image](https://github.com/user-attachments/assets/e41624a5-1fdb-48fd-b001-abb6405df73d)
+
+
+#### Open neccessary port
+
+```sudo ufw allow 22/tcp``` `For SSH`
+
+![image](https://github.com/user-attachments/assets/4e79b3cb-2e97-4fcf-ad18-e8771124105d)
+
+```sudo ufw allow 80/tcp``` `For HTTP`
+
+![image](https://github.com/user-attachments/assets/8c1dfe57-420b-4f77-9670-4b5f99bfb50a)
+
+2. Checking which ports are currently open on the system.
+  
+   To confirm which port are currently opened
+
+```sudo ufw status verbose```
+
+![image](https://github.com/user-attachments/assets/486b5047-9afd-45be-9b24-aed0cad1bd4b)
+
+
+
+4. Setting up an SSH key-based authentication to eliminate password logins.
 
 
 
