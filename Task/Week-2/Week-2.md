@@ -215,7 +215,7 @@ check whether there are any open port
 
 Both SSH and HTTP port are to opened, while the rest close and this task advised they should be closed.
 
-ufw not install, so install using ```sudo apt-get install ufw``` or sudp apt install ufw```
+ufw not install, so install using ```sudo apt-get install ufw``` or ```sudo apt install ufw```
 
 ![image](https://github.com/user-attachments/assets/d8a85ed7-8f9b-46f7-9074-ec29effc7528)
 
@@ -259,6 +259,12 @@ Deny incoming traffic into the server
 Install nmap, if not available using ```sudo apt install nmap```
 
 ```sudo nmap -sT -O localhost```
+
+you can also use the following also to check if any ports is opended 
+
+```sudo netstat -tlnp``` or ```sudo ss -tlnp
+
+![image](https://github.com/user-attachments/assets/41bb260b-c3a4-4f89-a0ce-fce1e3ff09d4)
 
 
 
