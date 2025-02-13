@@ -130,7 +130,7 @@ Enable `nginx` on the machine
 ```sudo systemctl status nginx```
 ![Screenshot 2025-02-12 042930](https://github.com/user-attachments/assets/b8e2f1d2-06e1-4f41-a68f-32e83b14e83b)
 
-Enable
+Test the connection of the nginx
 
 ```curl http://localhost```
 
@@ -139,16 +139,66 @@ Enable
 #### Set Up Automatic Restart if Nginx Crashes
 
 ```sudo systemctl edit --full nginx```
+
 Open the Nginx service file for editing
+
 Add the following lines under the `Service` of nginx_config file
 
 ![Screenshot 2025-02-12 044255](https://github.com/user-attachments/assets/c78a4c81-e6c5-4728-bd94-d59d030ee3ec)
 
 ```sudo systemctl restart nginx```
 
+![Screenshot 2025-02-12 044658](https://github.com/user-attachments/assets/7766f4c1-321d-489d-8664-603d6ca5f188)
+
+Test the restart policy of `nginx`
+
+ ```sudo killall nginx``` and ```sudo systemctl status nginx```
+ 
+ ![Screenshot 2025-02-12 044816](https://github.com/user-attachments/assets/9aadced5-846b-45c8-bf33-1bee0cee54c4)
+
+
+
 ###  (Optional) Configure Nginx for the Microservice
 
 
+1. Create a new configuration file for the microservice:
+
+```sudo nano /etc/nginx/sites-available/microservice```
+
+![Screenshot 2025-02-12 050004](https://github.com/user-attachments/assets/6f8f47ad-5f6b-4e4f-ad27-8e7084f4a8b4)
+
+2. Add the necessary configuration (e.g., reverse proxy, load balancing)
+
+```
+server {
+    listen 80;
+    server_name microservice.example.com;
+
+    location / {
+        proxy_pass http://localhost:3000; # Example: Proxy to a Node.js app
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+```
+
+![Screenshot 2025-02-12 050004](https://github.com/user-attachments/assets/077459ec-d7cf-46d2-af4a-95af1140c907)
+
+
+3. Enable the configuration by creating a symbolic link
+
+```sudo ln -s /etc/nginx/sites-available/microservice /etc/nginx/sites-enabled/```
+
+4. Test the Nginx configuration for syntax errors
+
+```sudo nginx -t```
+
+![image](https://github.com/user-attachments/assets/c4b47931-4c8a-4e97-be9b-87dcb07fb64a)
+
+5. Reload Nginx to apply the changes
+
+```sudo systemctl reload nginx```
 
 
 
