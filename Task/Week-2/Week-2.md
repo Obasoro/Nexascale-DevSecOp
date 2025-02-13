@@ -113,12 +113,53 @@ The Nginx service to start automatically on boot.
 
 ```sudo apt-get install nginx```
 
-![Screenshot 2025-02-12 042843](https://github.com/user-attachments/assets/6f4bacdc-9e1d-460d-806d-12b6ca0a6bdb)
-
 ![Screenshot 2025-02-12 042817](https://github.com/user-attachments/assets/bfe87714-c0a6-49aa-a2bd-1e969092105d)
 
 Enable `nginx` on the machine
 
 ```sudo systemctl enable nginx```
+
+![Screenshot 2025-02-12 042843](https://github.com/user-attachments/assets/6f4bacdc-9e1d-460d-806d-12b6ca0a6bdb)
+
+```sudo systemctl is-enabled nginx```
+
+```sudo systectl start nginx```
+
+![Screenshot 2025-02-12 042905](https://github.com/user-attachments/assets/d4e8a7f6-6f3e-414f-a535-4757aa6132b9)
+
+```sudo systemctl status nginx```
+![Screenshot 2025-02-12 042930](https://github.com/user-attachments/assets/b8e2f1d2-06e1-4f41-a68f-32e83b14e83b)
+
+Enable
+
+```curl http://localhost```
+
+![Screenshot 2025-02-12 044428](https://github.com/user-attachments/assets/18612ee7-749c-46bf-9e2c-022e66732dea)
+
+#### Set Up Automatic Restart if Nginx Crashes
+
+```sudo systemctl edit --full nginx```
+Open the Nginx service file for editing
+Add the following lines under the `Service` of nginx_config file
+
+![Screenshot 2025-02-12 044255](https://github.com/user-attachments/assets/c78a4c81-e6c5-4728-bd94-d59d030ee3ec)
+
+```sudo systemctl restart nginx```
+
+###  (Optional) Configure Nginx for the Microservice
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
