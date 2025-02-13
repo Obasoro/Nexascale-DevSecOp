@@ -66,15 +66,15 @@ Test access on the either of remain users
 
 ![alt text](<Screenshot 2025-02-11 175753.png>)
 
-[2] ### System monitoring and Performance Analysis
+### System monitoring and Performance Analysis
 
 
-Your team has been receiving complaints about server slowness during peak hours. You suspect a process might be consuming too many resources. Your tasks are:
+[2] Your team has been receiving complaints about server slowness during peak hours. You suspect a process might be consuming too many resources. Your tasks are:
 Identify the top resource-consuming process and determine if it is necessary.
 Check the disk usage to ensure logs are not consuming too much space.
 Monitor real-time system logs to detect anomalies.
 
-[ ] Identify the Top Resource-Consuming Process
+Identify the Top Resource-Consuming Process
  
  ```top -c```
 
@@ -99,5 +99,26 @@ Monitor real-time system logs to detect anomalies.
 
 ![Screenshot 2025-02-12 033229](https://github.com/user-attachments/assets/459a9db2-9a6b-4d19-8799-fcbba0b4b130)
 
+
+
+
+A check to ensure it is running properly after installation.
+The ability to restart it if it crashes.
+
+### Application Management
+
+[3] Your development team has requested the installation of Nginx for a new microservice. They also need: Your tasks are to install and setup
+
+The Nginx service to start automatically on boot.
+
+```sudo apt-get install nginx```
+
+![Screenshot 2025-02-12 042843](https://github.com/user-attachments/assets/6f4bacdc-9e1d-460d-806d-12b6ca0a6bdb)
+
+![Screenshot 2025-02-12 042817](https://github.com/user-attachments/assets/bfe87714-c0a6-49aa-a2bd-1e969092105d)
+
+Enable `nginx` on the machine
+
+```sudo systemctl enable nginx```
 
 
