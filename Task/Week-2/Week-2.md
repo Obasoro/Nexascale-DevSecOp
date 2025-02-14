@@ -270,9 +270,13 @@ you can also use the following to check if any ports is opened
 
 4. Setting up an SSH key-based authentication to eliminate password logins.
 
+###  SSH key-based authentication to eliminate password logins
+
 For this task, I created two virtual machines on [AWS](aws.com) 
 
 Server and client-server. A user `kunle-dev` on the client-server and `Yemi` on the master server
+
+![image](https://github.com/user-attachments/assets/9f95e9c1-b445-43e7-8b56-de69da6b5d45)
 
 ![1-server-client](https://github.com/user-attachments/assets/a54750b3-0370-47b6-bfaf-5f16f81f5cf1)
 
@@ -297,9 +301,63 @@ Copy the `id_rsa.pub` into the `master-server`
 
 ![Screenshot 2025-02-13 153128](https://github.com/user-attachments/assets/a81a313b-0bdd-4f7d-8a39-deb9c7f85332)
 
+login into the `master-server`. 
+
+cd into `.ssh` folder, if it does not exist, create one.
+
+![Screenshot 2025-02-13 153026](https://github.com/user-attachments/assets/c3faa2a5-6790-4720-9242-cafa784ba80e)
+
+```mkdir .ssh```
+
+```cd .ssh```
+
+```touch authorized_keys``` 
 
 
-![image](https://github.com/user-attachments/assets/9f95e9c1-b445-43e7-8b56-de69da6b5d45)
+![Screenshot 2025-02-13 153051](https://github.com/user-attachments/assets/f0c2e062-cd2b-4e2d-9c1d-d257b66fe460)
+
+paste the ssh public key
+
+```![Screenshot 2025-02-13 153128](https://github.com/user-attachments/assets/8144ddb1-f7a1-4af7-a87e-e8278d5ccb9a)```
+
+Go to to ```sshd_config``` file
+
+```sudo cd /home/ec2-user/ssh/sshd_config```
+
+Under Authorization, change the `PublicKeyAuthentication` to `yes`
+
+![Screenshot 2025-02-13 154655](https://github.com/user-attachments/assets/513a9893-3e10-43c1-9e10-e004cbf45b94)
+
+Restart the server sshd
+
+```sudo systemctl restart sshd```
+
+Generate the `ip-address` of the master server to access from using `ifconfig`
+
+![image](https://github.com/user-attachments/assets/6923545c-6d3a-4bff-bd50-dc2044894bc2)
+
+
+Go back to client-server
+
+Run this command `ssh name_of_user@ip_address`
+
+```ssh yemi@172.31.80.84```
+
+![image](https://github.com/user-attachments/assets/547530c3-15f0-413b-840d-e8cf7c92e0f9)
+
+The server was authenticated without a password
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
