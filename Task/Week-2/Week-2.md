@@ -234,7 +234,7 @@ Deny incoming traffic into the server
 ![image](https://github.com/user-attachments/assets/e41624a5-1fdb-48fd-b001-abb6405df73d)
 
 
-#### Open neccessary port
+#### Open necessary port
 
 ```sudo ufw allow 22/tcp``` `For SSH`
 
@@ -246,7 +246,7 @@ Deny incoming traffic into the server
 
 2. Checking which ports are currently open on the system.
   
-   To confirm which port are currently opened we use the following tool like netstat, ss, or nmap to check open ports.
+   To confirm which ports are currently opened we use the following tools like netstat, ss, or nmap to check open ports.
 
 ```sudo ufw status verbose```
 
@@ -260,7 +260,7 @@ Install nmap, if not available using ```sudo apt install nmap```
 
 ```sudo nmap -sT -O localhost```
 
-you can also use the following also to check if any ports is opended 
+you can also use the following to check if any ports is opened 
 
 ```sudo netstat -tlnp``` or ```sudo ss -tlnp
 
@@ -268,10 +268,39 @@ you can also use the following also to check if any ports is opended
 
 
 
-
-
-
 4. Setting up an SSH key-based authentication to eliminate password logins.
+
+For this task, I created two virtual machines on [AWS](aws.com) 
+
+Server and client-server. A user `kunle-dev` on the client-server and `Yemi` on the master server
+
+![1-server-client](https://github.com/user-attachments/assets/a54750b3-0370-47b6-bfaf-5f16f81f5cf1)
+
+![2-user-in server-client](https://github.com/user-attachments/assets/a923589d-1e62-4f6f-a95a-ee52062247b7)
+
+![Screenshot 2025-02-13 153008](https://github.com/user-attachments/assets/e8c87055-7a24-4599-95d0-1701aeb764f2)
+
+
+Generated ssh-key on the client server
+
+```ssh-keygen -b 4096```
+
+![Screenshot 2025-02-13 152236](https://github.com/user-attachments/assets/92bb5224-f56f-423a-9a21-e713a3ba1025)
+
+Go into folder of the the `.ssh`
+
+```sudo cd /etc/.ssh/```
+
+![image](https://github.com/user-attachments/assets/45342a8d-cc71-4d29-8bf6-cb550332e501)
+
+Copy the `id_rsa.pub` into the `master-server`
+
+![Screenshot 2025-02-13 153128](https://github.com/user-attachments/assets/a81a313b-0bdd-4f7d-8a39-deb9c7f85332)
+
+
+
+![image](https://github.com/user-attachments/assets/9f95e9c1-b445-43e7-8b56-de69da6b5d45)
+
 
 
 
