@@ -41,7 +41,15 @@ changed the name to respective webserver
 ### Installation of nginx on webserver-1
 
 ```sudo yum install nginx```
+
+```sudo systemctl start nginx```
+
+![alt text](image-7.png)
 ![alt text](webserver-1-nginx.png)
+
+```sudo systemctl status nginx```
+
+![alt text](image-8.png)
 
 ### Installation of Apache on webser-2
 
@@ -50,3 +58,9 @@ changed the name to respective webserver
 ```sudo apt-get install apache2```
 
 ![alt text](image-5.png)
+
+---check the Apache is working---
+
+```sudo systemctl start apache2```
+
+![alt text](image-6.png)
