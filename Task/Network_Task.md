@@ -20,3 +20,11 @@ Deliverables:
 * Health check logs
 ```
 #### Deploy of webserver  with different content
+
+Two webservers from two different linux distros were created. `ubuntus` and `Amazon linux`
+
+![alt text](webserver-1.png)
+
+![alt text](webserver-2.png)
+
+![alt text](image-2.png)
