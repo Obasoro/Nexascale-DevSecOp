@@ -42,10 +42,9 @@ changed the name to respective webserver
 
 ```sudo yum install nginx```
 
-```sudo systemctl start nginx```
+![alt text](<Screenshot 2025-02-28 020251.png>)
 
-![alt text](image-7.png)
-![alt text](webserver-1-nginx.png)
+```sudo systemctl start nginx```
 
 ```sudo systemctl status nginx```
 
@@ -64,3 +63,13 @@ changed the name to respective webserver
 ```sudo systemctl start apache2```
 
 ![alt text](image-6.png)
+
+### Set the security group rules for both webservers on AWS
+
+[webserver-1]
+
+![alt text](image-10.png)
+
+[webserver-2]
+
+![alt text](image-9.png)
