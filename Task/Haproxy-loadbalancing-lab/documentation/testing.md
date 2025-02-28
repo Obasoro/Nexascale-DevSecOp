@@ -42,5 +42,11 @@ This is the pattern
 
 ![image](https://github.com/user-attachments/assets/def05582-dbfe-42a5-b794-953cb02a30b5)
 
+### Check Statistic for Connection
+
+```http://<HAProxy_IP>:8080/stats```
+
+![image](https://github.com/user-attachments/assets/d686e083-bc1b-4d60-999d-72989829e70f)
+
 
 
