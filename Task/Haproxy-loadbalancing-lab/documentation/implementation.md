@@ -141,3 +141,16 @@ Confirm `haproxy server is working efficiently
 
 ![alt text](<Screenshot 2025-02-28 033517.png>)
 
+## Implementation of Algorithms
+
+Our HaProxy server is a Redhat server, install the various tool
+
+```sudo yum install httpd-tools```
+
+![image](https://github.com/user-attachments/assets/e6661d7e-ea26-4f60-967a-10a26edd4812)
+
+
+
+
+
+
