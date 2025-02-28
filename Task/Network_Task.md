@@ -73,3 +73,11 @@ changed the name to respective webserver
 [webserver-2]
 
 ![alt text](image-9.png)
+
+### confirm the nginx and apache are working
+
+```curl http://localhost```
+
+![alt text](image-11.png)
+
+![alt text](image-12.png)
