@@ -81,3 +81,44 @@ changed the name to respective webserver
 ![alt text](image-11.png)
 
 ![alt text](image-12.png)
+
+### Create a directory to hold the index.html
+
+For nginx server, this directory might not be available, you have to create.
+
+For Apache server, this directory is available.
+
+To create, the directory, run this code.
+
+```sudo mkdir -p /var/www/html/index.html```
+
+Run this code to copy into the file.
+
+```
+echo "<h1>Nginx Web Server</h1><p>This request was served by Nginx.</p>" | sudo tee /var/www/html/index.html
+
+```
+
+```
+echo "<h1>This is an Apache configuration. It is our Web Server-2</h1><p>This is the second web se
+rver.</p>" | sudo tee /var/www/html/index.html
+
+```
+
+### Creating a Haproxy loadbalancer
+
+![alt text](image-13.png)
+
+Log into the sever using `ssh``
+
+```ssh -i "Haproxy.pem" ec2-user@ec2-54-160-244-191.compute-1.amazonaws.com```
+
+![alt text](image-14.png)
+
+Install the `Haproxy server`
+
+```sudo yum update```
+
+```sudo yum install haproxy```
+
+![alt text](image-15.png)
