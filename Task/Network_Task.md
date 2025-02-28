@@ -109,7 +109,7 @@ rver.</p>" | sudo tee /var/www/html/index.html
 
 ![alt text](image-13.png)
 
-Log into the sever using `ssh``
+Log into the sever using `ssh`
 
 ```ssh -i "Haproxy.pem" ec2-user@ec2-54-160-244-191.compute-1.amazonaws.com```
 
@@ -122,3 +122,22 @@ Install the `Haproxy server`
 ```sudo yum install haproxy```
 
 ![alt text](image-15.png)
+
+Edit the the config file of the haproxy
+
+```sudo vi /etc/haproxy/haproxy.cfg```
+
+![alt text](image-16.png)
+
+Edit the backend server IP provider by replacing it with the `nginx` and `apache` IP
+
+![alt text](image-17.png)
+
+Confirm `haproxy server is working efficiently
+
+```sudo systemctl restart haproxy```
+
+```sudo systemctl status haproxy```
+
+![alt text](<Screenshot 2025-02-28 033517.png>)
+
