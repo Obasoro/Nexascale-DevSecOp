@@ -28,3 +28,26 @@ Two webservers from two different linux distros were created. `ubuntus` and `Ama
 ![alt text](webserver-2.png)
 
 ![alt text](image-2.png)
+
+### Rename of the Server
+
+```sudo vi /etc/hostname```
+
+```sudo su -```
+
+changed the name to respective webserver
+
+![alt text](webserver-changed.png)
+
+### Installation of nginx on webserver-1
+
+```sudo yum install nginx```
+![alt text](webserver-1-nginx.png)
+
+### Installation of Apache on webser-2
+
+```sudo apt-get update```
+
+```sudo apt-get install apache2```
+
+![alt text](image-5.png)
