@@ -135,6 +135,8 @@ Edit the backend server IP provider by replacing it with the `nginx` and `apache
 
 Confirm `haproxy server is working efficiently
 
+```sudo haproxy -c -f /etc/haproxy/haproxy.cfg```
+
 ```sudo systemctl restart haproxy```
 
 ```sudo systemctl status haproxy```
