@@ -1,7 +1,7 @@
 ## Testing of HaProxy Loadbalancer.
 
 # Test Round Robin (Port 80)
-This is the pattern
+
 `ab [options] [http[s]://]hostname[:port]/path`
 
 ```ab -n 1000 -c 10 http://3.83.140.17:80/```
