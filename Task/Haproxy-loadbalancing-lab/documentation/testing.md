@@ -42,7 +42,37 @@ This is the pattern
 
 ![image](https://github.com/user-attachments/assets/def05582-dbfe-42a5-b794-953cb02a30b5)
 
-### Check Statistic for Connection
+### Perfromance
+
+```echo "show stat" | sudo socat stdio /var/lib/haproxy/stats | awk -F, '{printf "%-20s %-10s %-15s %-10s %-10s %-10s\n", $1, $2, $18, $4, $5, $8}'```
+
+
+![image](https://github.com/user-attachments/assets/0ea94323-28ff-4d61-8bd8-19cd402cdc13)
+
+```echo "show stat" | sudo socat stdio /var/lib/haproxy/stats | awk -F, '{printf "%-20s %-10s %-15s %-10s %-10s %-10s\n", $1, $2, $18, $4, $5, $8}'```
+
+![image](https://github.com/user-attachments/assets/50c1cc89-230f-4b58-811f-dbd4e2062e01)
+
+#### Roundrobin Algorithms
+
+```echo "show stat" | sudo socat stdio /var/lib/haproxy/stats | grep roundrobin```
+
+![image](https://github.com/user-attachments/assets/1cf1be74-c68d-46fb-969f-d968919b3b5e)
+
+#### Least_connection Algorithms
+
+echo "show stat" | sudo socat stdio /var/lib/haproxy/stats | grep least
+
+![image](https://github.com/user-attachments/assets/ab8cdceb-fed0-4b63-8db2-412bd5d9f9cd)
+
+#### IP Hash Algorithms
+
+```echo "show stat" | sudo socat stdio /var/lib/haproxy/stats | grep source```
+
+![image](https://github.com/user-attachments/assets/9a3bb2b0-00e7-4790-b75d-19539af6ff7d)
+
+
+### Check Statistics for Connection
 
 ```http://<HAProxy_IP>:8080/stats```
 
