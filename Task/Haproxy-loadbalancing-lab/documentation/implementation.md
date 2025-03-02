@@ -160,6 +160,73 @@ Our HaProxy server is a Redhat server, install the various testing tools
 
 ![image](https://github.com/user-attachments/assets/e6661d7e-ea26-4f60-967a-10a26edd4812)
 
+#### Setting Logging on Haproxy Server Redhat
+
+1. Creating the path for the log  set in the config file
+   
+   ```sudo vi /var/log/haproxy.log```
+   
+2. Create directory for the Haproxy dev
+
+   ```sudo mkdir /var/lib/haproxy/dev```
+
+3. Create a config file within the `Rsyslog` to collect log
+
+    ```sudo vi /etc/rsyslog.d/haproxy.conf```
+
+   Paste the following code into the config file
+   
+   ```$AddUnixListenSocket /var/lib/haproxy/dev/log
+
+# Send HAProxy messages to a dedicated logfile
+:programname, startswith, "haproxy" {
+  /var/log/haproxy.log
+  stop
+}
+```
+4. Run this command ```getenforce```, if `enforcing` is return, follow the steps below, but `permissive` or `disable`
+
+run this command ```sudo systemctl restart rsyslog```
+
+5. Create a file `rsyslog-haproxy.te`
+
+  ```sudo vi rsyslog-haproxy.te```
+
+6. Paste into the file the following command
+
+```
+module rsyslog-haproxy 1.0;
+
+require {
+    type syslogd_t;
+    type haproxy_var_lib_t;
+    class dir { add_name remove_name search write };
+    class sock_file { create setattr unlink };
+}
+
+#============= syslogd_t ==============
+allow syslogd_t haproxy_var_lib_t:dir { add_name remove_name search write };
+allow syslogd_t haproxy_var_lib_t:sock_file { create setattr unlink };
+
+```
+
+7. Run the following to command to change the `policy` package. which would change enforcment
+
+  ```sudo yum install checkpolicy```
+
+  ```sudo checkmodule -M -m rsyslog-haproxy.te -o rsyslog-haproxy.mod```
+
+
+  run `semodule_package` to generate a complete policy package that SELinux can load into the Linux kernel:
+
+  ```sudo semodule_package -o rsyslog-haproxy.pp -m rsyslog-haproxy.mod```
+
+  ```sudo semodule -l |grep rsyslog-haproxy```
+
+8. Restart you `Rsyslog`
+
+```sudo systemctl restart rsyslog```
+
 
 
 
