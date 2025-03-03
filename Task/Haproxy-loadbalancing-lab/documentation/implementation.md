@@ -227,6 +227,8 @@ allow syslogd_t haproxy_var_lib_t:sock_file { create setattr unlink };
 
 ```sudo systemctl restart rsyslog```
 
+[Haproxy logging](https://www.digitalocean.com/community/tutorials/how-to-configure-haproxy-logging-with-rsyslog-on-centos-8-quickstart)
+
 
 
 
