@@ -59,6 +59,20 @@ Humidity: 75%
 
   ![image](https://github.com/user-attachments/assets/b03df71d-49f8-40d2-b9b8-f448d7c4bafb)
 
+**************
+### Task 3
+
+***********
+
+## 3. Log File Error Scanner  
+📌 **Task:** Write a script that scans a `.log` file and counts occurrences of the word `"ERROR"`.  
+✅ **Instructions:**  
+- Create a sample `.log` file with different log messages, including `"ERROR"`.  
+- Write a Python script that reads the file and counts occurrences of `"ERROR"`.  
+- Example output:  
+Found 5 occurrences of 'ERROR' in logs.
+
+- **Bonus:** Extend the script to filter logs by date or severity level (INFO, WARNING, ERROR).  
 
   
 
