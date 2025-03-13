@@ -32,5 +32,21 @@ Execute code
 
 ![image](https://github.com/user-attachments/assets/3762b43d-9bed-4011-ad41-dac16dcc0099)
 
+*****
+### Task 2
+
+*****
+
+## 2. API Interaction (Weather Data Fetching)  
+📌 **Task:** Write a Python script that fetches weather data from an API and processes the response.  
+✅ **Instructions:**  
+- Sign up at [OpenWeatherMap](https://home.openweathermap.org/users/sign_up) and get a free API key.  
+- Fetch weather details (temperature, weather condition, humidity) for a given city.  
+- Example output:  
+Weather in Lagos: 
+Temperature: 30°C 
+Condition: Clear sky 
+Humidity: 75%
 
 
+- **Bonus:** Modify the script to allow users to enter multiple city names. 
