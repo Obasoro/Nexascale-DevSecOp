@@ -57,6 +57,9 @@ Humidity: 75%
 
   ![image](https://github.com/user-attachments/assets/203b3dcb-b954-4399-8540-ca7bb5bed189)
 
+  ![image](https://github.com/user-attachments/assets/b03df71d-49f8-40d2-b9b8-f448d7c4bafb)
+
+
   
 
   
