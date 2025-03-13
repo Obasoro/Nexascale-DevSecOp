@@ -18,12 +18,19 @@ Bonus: Extend the script to log this data into a file for future analysis.
 
 ```
 
-[-] Installation of python libarary 
+[-] Installation of Python library 
 
 ```sudo su -```
 
 ```apt install python3-psutil```
 
 ![image](https://github.com/user-attachments/assets/26d9fa28-8546-4f78-84f2-d8aeb5b25808)
+
+Execute code
+
+```python3 memoery_cpu.py```
+
+![image](https://github.com/user-attachments/assets/3762b43d-9bed-4011-ad41-dac16dcc0099)
+
 
 
