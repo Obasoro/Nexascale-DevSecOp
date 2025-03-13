@@ -72,8 +72,17 @@ Humidity: 75%
 - Example output:  
 Found 5 occurrences of 'ERROR' in logs.
 
-- **Bonus:** Extend the script to filter logs by date or severity level (INFO, WARNING, ERROR).  
+- **Bonus:** Extend the script to filter logs by date or severity level (INFO, WARNING, ERROR).
 
-  
+- check for the presence of ERROR
 
-  
+```python3 scan_error.py```
+
+
+![image](https://github.com/user-attachments/assets/e7a747d9-d854-4cd2-ab0e-59cd83caf3ac)
+
+
+- Edited the `scan.log` file and changed `error` to `ERROR`
+
+![image](https://github.com/user-attachments/assets/c17fc083-f083-42e0-bf0d-dbeb1738bd26)
+ 
