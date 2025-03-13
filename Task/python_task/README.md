@@ -49,4 +49,14 @@ Condition: Clear sky
 Humidity: 75%
 
 
-- **Bonus:** Modify the script to allow users to enter multiple city names. 
+- **Bonus:** Modify the script to allow users to enter multiple city names.
+
+  Install the Python library request
+
+  ```sudo apt-get --reinstall install python3-requests```
+
+  ![image](https://github.com/user-attachments/assets/203b3dcb-b954-4399-8540-ca7bb5bed189)
+
+  
+
+  
